@@ -1,0 +1,14 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { NavBar } from '../components/nav';
+import '../goals.styl'
+import Goals from '../components/goals.vue';
+const array = [
+    10,20,30,40,50,60,70,80,90,100
+]
+---
+<Layout title='EnherGoals'>
+
+    <NavBar  isprotected />
+    <Goals client:only="vue"/>
+</Layout>

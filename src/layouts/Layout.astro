@@ -1,0 +1,54 @@
+---
+interface Props {
+	title: string;
+}
+
+import 'tippy.js/dist/tippy.css';
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>{title}</title>
+
+	</head>
+	<body id="swup" class="transition-fade">
+		<script src="https://unpkg.com/swup@4"></script>
+		<script src="https://unpkg.com/@swup/scripts-plugin@2"></script>
+		<slot />
+	</body>
+</html>
+<style  is:global>
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@500&family=Montserrat&display=swap');
+@font-face {
+	font-family: 'Harlouda';
+	src: url('/harlow.ttf');
+}
+	*{
+		margin: 0;
+		--nav-width:64px;
+		padding: 0;
+	}
+	body
+	{
+
+		background: url('/mbg.png');
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	*[data-heading]
+	{
+
+		font-family: 'Montserrat';
+	}
+	/* Define a transition duration during page visits */
+html.is-changing .transition-fade {
+  transition: opacity 0.25s;
+  opacity: 1;
+}
+/* Define the styles for the unloaded pages */
+html.is-animating .transition-fade {
+  opacity: 0;
+}
+</style>
