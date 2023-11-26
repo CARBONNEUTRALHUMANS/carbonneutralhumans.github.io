@@ -1,0 +1,41 @@
+{
+  "name": "enhertree",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/solid-js": "^3.0.2",
+    "@astrojs/vue": "^3.0.4",
+    "@builder.io/qwik": "^1.2.19",
+    "@headlessui/vue": "^1.7.16",
+    "@lottiefiles/vue-lottie-player": "^1.1.0",
+    "@qwik-ui/headless": "^0.1.17",
+    "@qwikdev/astro": "^0.2.4",
+    "@qwikest/icons": "^0.0.13",
+    "@swup/scripts-plugin": "^2.1.0",
+    "@types/qrcodejs": "^1.0.4",
+    "@types/vue": "^2.0.0",
+    "astro": "^3.6.0",
+    "astro-icon": "^0.8.1",
+    "daisyui": "^3.9.4",
+    "easyqrcodejs": "^4.6.0",
+    "lottie-web": "^5.12.2",
+    "qrcodejs": "^1.0.0",
+    "qwik-lottie": "^0.1.8",
+    "qwik-lottie-web": "^0.2.0",
+    "solid-js": "^1.8.6",
+    "stylus": "^0.62.0",
+    "swup": "^4.4.4",
+    "tippy.js": "^6.3.7",
+    "unocss": "^0.57.7",
+    "unocss-preset-daisy": "^7.0.0",
+    "vue": "^3.3.9",
+    "vue3-lottie": "^3.2.0"
+  }
+}
