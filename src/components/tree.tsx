@@ -17,7 +17,7 @@ export const Tree = component$(() => {
           tree.value = currentUser.value.trees[url.i]
     })
     return (
-        <div class="w-100vw grid place-items-center grid-cols-2 font-sans overflow-hidden" style="height: calc(100vh - 64px);">
+        <div class="w-100vw flex justify-center flex-row flex-wrap items-center font-sans overflow-hidden" style="height: calc(100vh - 64px);">
             {
               tree.value ? (
               <><div class="w-50vw h-full">

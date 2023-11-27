@@ -233,7 +233,7 @@ export const PassBook = component$(() => {
             </div>
             <div class="back">
                 <div id="b4" class="back-content">
-                <h1>Back 1</h1>
+                <img class="w-100% h-100%" src="/Picture1.png" alt="" />
             </div>
         </div>
         </div>
@@ -254,14 +254,14 @@ const Tree = component$<TreeProps>(({index}) => {
     const qr = useSignal<HTMLElement>()
     useVisibleTask$(() => {
         new Qrcode(qr.value, {
-            text:'http://localhost:4321/mytree?i='+index,
+            text:'https://carbonneutralhumans.github.io/mytree?i='+index,
             height:150,
             width:150,
             logo: '/btree.png'
         })
     })
     return (
-        <a class="my-5" href={'http://localhost:4321/mytree?i='+index}>
+        <a class="my-5" href={'https://carbonneutralhumans.github.io/mytree?i='+index}>
 
             <h1>
                 {/* Tree {index+1} */}
