@@ -269,14 +269,14 @@ const Tree = component$<TreeProps>(({index}) => {
     const qr = useSignal<HTMLElement>()
     useVisibleTask$(() => {
         new Qrcode(qr.value, {
-            text:'http://localhost:4321/mytree?i='+index,
+            text:'https://carbonneutralhumans.github.io/mytree?i='+index,
             height:150,
             width:150,
             logo: '/btree.png'
         })
     })
     return (
-        <a class="my-5" href={'http://localhost:4321/mytree?i='+index}>
+        <a class="my-5" href={'https://carbonneutralhumans.github.io/mytree?i='+index}>
 
             <h1>
                 {/* Tree {index+1} */}
