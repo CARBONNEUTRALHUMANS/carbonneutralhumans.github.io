@@ -4,6 +4,7 @@ export type Tree = {
     biologicalType: string;
     location:string;
     height: number;
+    found: boolean;
 }
 export type User = {
     firstName: string;
@@ -28,32 +29,41 @@ export const data: User[] = [
                 dayPlanted: new Date("2018-2-4"),
                 genericType: "Ficus religiosa",
                 location: "St. Paul HS",
-                height: 22
+                height: 22,
+                found:true,
             },
             {
                 biologicalType: "Peepal",
-                dayPlanted: new Date("2018-2-4"),
+                dayPlanted: new Date("2017-4-4"),
                 genericType: "Ficus religiosa",
                 location: "St. Paul HS",
-                height: 22
+                height: 22,
+                found:true,
+
             },            {
                 biologicalType: "Peepal",
-                dayPlanted: new Date("2018-2-4"),
+                dayPlanted: new Date("2019-8-4"),
                 genericType: "Ficus religiosa",
                 location: "St. Paul HS",
-                height: 22
+                height: 22,
+                found:true,
+
             },            {
                 biologicalType: "Peepal",
-                dayPlanted: new Date("2018-2-4"),
+                dayPlanted: new Date("2010-2-4"),
                 genericType: "Ficus religiosa",
                 location: "St. Paul HS",
-                height: 22
+                height: 22,
+                found:true,
+
             },         {
                 biologicalType: "Peepal",
-                dayPlanted: new Date("2018-2-4"),
+                dayPlanted: new Date("2016-2-4"),
                 genericType: "Ficus religiosa",
                 location: "St. Paul HS",
-                height: 22
+                height: 22,
+                found:false,
+
             },
             
         ],
@@ -71,7 +81,9 @@ export const data: User[] = [
                 dayPlanted: new Date("2018-2-4"),
                 genericType: "Ficus religiosa",
                 location: "St. Paul HS",
-                height:39
+                height:39,
+                found:true,
+
             }
         ],
     }

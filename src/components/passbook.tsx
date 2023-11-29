@@ -144,7 +144,7 @@ export const PassBook = component$(() => {
                 </div>
             </div>
             <div class="back">
-                <div id="b1" class="back-content text-center gap-3 px-4 box-border py-5">
+                <div id="b1" class="back-content text-center gap-3 px-4 box-border  ">
                 <h1 style={{fontFamily: "harlouda"}}>Account Details</h1>
                 <hr />
                 <h2 class="text-2xl">Name: {currentUser.value ? currentUser.value.firstName : ""} {currentUser.value ? currentUser.value.lastName : ""} </h2>
@@ -152,9 +152,16 @@ export const PassBook = component$(() => {
                 <h2 class="text-2xl">Gender: {currentUser.value ? currentUser.value.gender : ""} </h2>
                 <hr />
                 <h2 class="text-2xl">Account Number: {Math.floor(Math.random() * 10 ** 12)} </h2>
-                <h2 class="text-2xl">Aadhar Number: {Math.floor(Math.random() * 10 ** 12)} </h2>
+                <h2 class="text-2xl">
+                    <a href="/aadhar">
+                    Aadhar Number: {Math.floor(Math.random() * 10 ** 12)}
+                    </a>
+
+                 </h2>
                 <hr />
-                <h2 class="text-2xl bg-orange-200 p-2 box-border text-center mt-2">For Further Details please contact: <a href="#">  EnherBank.com</a></h2>
+                <h2 class="text-2xl bg-orange-200 p-2 box-border text-center mt-2">For Further Details please contact: <a href="#">  EnherBank.com</a>
+                <br />
+                </h2>
 
             </div>
         </div>
@@ -225,6 +232,14 @@ export const PassBook = component$(() => {
                         </label>
                         <h1>Result: {totalOxygen.value - sum.value}</h1>
                         <br />
+                        {
+                            totalOxygen.value > 1906 ?
+                                <>
+                                <h4>Congratulations, You Are Eligible For Driving License</h4>
+                                </>
+                            : <>
+                            </>
+                        }
                         <a href="/" class="bg-#607222 p-4 no-underline text-white mt-3"><LuStepForward class="w-5  h-5"/>Continue</a>
                      </div>
 
@@ -254,14 +269,14 @@ const Tree = component$<TreeProps>(({index}) => {
     const qr = useSignal<HTMLElement>()
     useVisibleTask$(() => {
         new Qrcode(qr.value, {
-            text:'https://carbonneutralhumans.github.io/mytree?i='+index,
+            text:'http://localhost:4321/mytree?i='+index,
             height:150,
             width:150,
             logo: '/btree.png'
         })
     })
     return (
-        <a class="my-5" href={'https://carbonneutralhumans.github.io/mytree?i='+index}>
+        <a class="my-5" href={'http://localhost:4321/mytree?i='+index}>
 
             <h1>
                 {/* Tree {index+1} */}

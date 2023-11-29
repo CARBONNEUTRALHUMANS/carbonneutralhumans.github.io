@@ -14,6 +14,7 @@ export const NavBar = component$<NavBarProps>((props) => {
     const user = useSignal("")
     const emailInputValue = useSignal("")
     const passwordInputValue = useSignal("")
+    
     useVisibleTask$(() => {
         if(firstNames.includes(localStorage.getItem("user"))){
             loggedIn.value = true
@@ -98,6 +99,10 @@ export const NavBar = component$<NavBarProps>((props) => {
             <input bind:value={passwordInputValue} id="pass" type="password" class="bg-#FBD9D8 border-none p-2 text-#010001  border-b border-2 placeholder:font-bold placeholder:text-#010001 placeholder:font-sans w-40% self-center border-#010001 border-b-solid" placeholder="Password"/>
             <button onClick$={login} type="button" class="bg-#010001 text-#FBD9D8 font-sans border-none cursor-pointer py-3 w-30% self-center font-bold  hover:w-40% transition-all ">Submit</button>
         </form>
+        </dialog>
+        <dialog>
+
+            <h1>You are Eligible For Your Aadhar Card, Kindly Claim it</h1>
         </dialog>
             </>
     )
