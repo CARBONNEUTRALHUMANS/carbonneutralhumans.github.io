@@ -1,0 +1,9 @@
+---
+import { NavBar } from "../components/nav";
+import Tree from "../components/tree.vue";
+
+import Layout from "../layouts/Layout.astro";
+---
+<Layout title="My Tree">
+    <Tree client:only="vue"/>
+</Layout>

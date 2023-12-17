@@ -1,0 +1,407 @@
+---
+import '../components/index.css'
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EnherShop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./index.css"/>
+    
+</head>
+<body>
+    <header>
+     <div class="navbar">
+
+        <div class="nav-logo border">
+            <div class="logo"><br></div>
+        </div>
+
+        <div class=" nav-address border">
+            <p class="add-first"></p>
+            <div class="add-icon">
+                <i class=""></i>
+                <p class="add-sec"></p>
+            </div>
+        </div>
+
+        <div class="nav-search">
+            <select class="search-select">
+                <option>All</option>
+            </select>
+            <input placeholder="Search with EnherShop" class="search-input">
+            <div class="search-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+
+        </div>
+ 
+        <button class="nav-signin border" id="login">
+            <p><span><h2>Log In</h2></span></p>
+        </button>
+        <button class="nav-signin border" id="lg">
+            <p><span><h2>Log Out</h2></span></p>
+        </button>
+        <div class="nav-returns border">
+            <p><span>Returns</span></p>
+            <p class="nav-second">and Orders</p>
+        </div>
+
+        <div class="nav-cart border">
+            <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+            <p>Cart</p>
+        </div>
+
+    </div>
+
+
+    <div class="panel">
+        <div class="panel-all">
+            <i class="fa-sharp fa-solid fa-bars"></i>
+            All
+        </div>
+
+        <div class="panel-ops">
+            <p>Today's Deal</p>
+            <p>Customer Service</p>
+            <p>Registry</p>
+            <p>Plants</p>
+            <p>Sell</p>
+        </div>
+
+        <div class="panel-deals">
+           Shop Deals WorldWide
+        </div>
+
+    </div>
+
+</div>
+</header>
+
+<div class="hero-section">
+    <div class="hero-msg">
+        <p>YOU ARE ON ENHERSHOP.COM <a>Explore Freely </a></p>
+
+    </div>
+
+</div>
+
+<div class="shop-section">
+    <div class="box1 box">
+        <div class="box-content">
+            <h2>FRUIT TREE'S</h2>
+        <div class="box-image" style="background-image: url('/FRUITY-TUTY.png')"></div>
+        <p>See more</p>
+        </div>
+    </div>
+
+    <div class="box1 box">
+        <div class="box-content">
+            <h2>SHOWCASE TREE'S</h2>
+        <div class="box-image" style="background-image: url('/showcase-real.png')"></div>
+        <p>See more</p>
+        </div>
+    </div>
+
+    <div class="box1 box">
+        <div class="box-content">
+            <h2>HERB'S</h2>
+        <div class="box-image" style="background-image: url('/HERBS.png')"></div>
+        <p>See more</p>
+        </div>
+    </div>
+
+    <div class="box1 box">
+        <div class="box-content">
+            <h2>CASH CROPS</h2>
+        <div class="box-image" style="background-image: url('/CASHY.png')"></div>
+        <p>See more</p>
+        </div>
+    </div>
+
+    <div class="box1 box">
+        <div class="box-content">
+            <h2>ESSENTIAL'S</h2>
+        <div class="box-image" style="background-image: url('/UT.png')"></div>
+        <p>See more</p>
+        </div>
+    </div>
+
+    <div class="box1 box">
+        <div class="box-content">
+            <h2>SEEDLING'S</h2>
+        <div class="box-image" style="background-image: url('/SEED.png')"></div>
+        <p>See more</p>
+        </div>
+    </div>
+
+    <div class="box1 box">
+        <div class="box-content">
+            <h2>INFORMATION</h2>
+        <div class="box-image" style="background-image: url('/INFO.gif')"></div>
+        <p>See more</p>
+        </div>
+    </div>
+
+    <div class="box1 box">
+        <div class="box-content">
+            <h2>TREE'S</h2>
+        <div class="box-image" style="background-image: url('/tre.png')"></div>
+        <p>See more</p>
+        </div>
+    </div>
+    
+   
+</div>
+
+<footer class="h-1">
+   
+</footer>
+<dialog class="w-100vw relative transition-all opacity-0 duration-1000 grid-cols-1 h-100vw bg-#FEFFFF hidden absolute top-50% left-50% translate-x--50% translate-y--50% border-none items-center justify-center" id="modal">
+    <button class="font-sans w-6 h-6 absolute right-10px top-10px border-none bg-transparent cursor-pointer text-6xl" style="background-image: url('/meow.png');background-size: contain;" id="cbtn"></button>
+    <form method="dialog" id="dform" class="flex gap-3 flex-col self-center relative bottom-15">
+    
+    <h1 class="text-center font-sans mb-3">Login</h1>
+    <input id="email" type="email" class="bg-#FBD9D8 border-none p-2 text-#010001 border-b border-2 placeholder:font-bold placeholder:text-#010001 placeholder:font-sans w-40% self-center border-#010001 border-b-solid" placeholder="Email"/>
+    <input id="pass" type="password" class="bg-#FBD9D8 border-none p-2 text-#010001 border-b border-2 placeholder:font-bold placeholder:text-#010001 placeholder:font-sans w-40% self-center border-#010001 border-b-solid" placeholder="Password"/>
+    <button class="bg-#010001 text-#FBD9D8 font-sans border-none cursor-pointer py-3 w-30% self-center font-bold hover:w-40% transition-all ">Submit</button>
+    </form>
+    </dialog>
+<script is:inline>
+    let currentAccessed = null;
+const effectQueue = [];
+
+
+class Signal {
+constructor(initialValue) {
+this._value = initialValue;
+this._dependents = [];
+}
+
+get value() {
+if (currentAccessed) {
+this._addDependent(currentAccessed);
+}
+return this._value;
+}
+
+set value(newValue) {
+if (this._value !== newValue) {
+this._value = newValue;
+this._notifyDependents();
+executeEffects();
+}
+}
+
+_addDependent(dependent) {
+if (!this._dependents.includes(dependent)) {
+this._dependents.push(dependent);
+}
+}
+
+_removeDependent(dependent) {
+this._dependents = this._dependents.filter((dep) => dep !== dependent);
+}
+
+_notifyDependents() {
+for (const dependent of this._dependents) {
+dependent._update();
+}
+}
+}
+
+class Computed {
+constructor(computeFn) {
+this._computeFn = computeFn;
+this._value = undefined;
+this._isStale = true;
+this._dependents = [];
+}
+
+get value() {
+if (this._isStale) {
+const previousContext = currentAccessed;
+currentAccessed = this;
+this._recomputeValue();
+currentAccessed = previousContext;
+}
+if (currentAccessed) {
+this._addDependent(currentAccessed);
+}
+
+return this._value;
+}
+
+_recomputeValue() {
+this._value = this._computeFn();
+this._isStale = false;
+}
+
+_addDependent(dependent) {
+if (!this._dependents.includes(dependent)) {
+this._dependents.push(dependent);
+}
+}
+
+
+_update() {
+if (!this._isStale) {
+this._isStale = true;
+for (const dependent of this._dependents) {
+dependent._update();
+}
+}
+}
+}
+
+// Store the current context (a Computed or Effect instance) for dependency tracking
+
+
+class Effect {
+constructor(effectFn) {
+this._effectFn = effectFn;
+this._isStale = true;
+this._execute();
+}
+
+_execute() {
+if (this._isStale) {
+currentAccessed = this;
+this._effectFn();
+currentAccessed = null;
+}
+this._isStale = false;
+}
+
+_update() {
+if (!this._isStale) {
+this._isStale = true;
+effectQueue.push(this);
+}
+}
+}
+
+function executeEffects() {
+while (effectQueue.length > 0) {
+const effect = effectQueue.shift();
+effect._execute();
+}
+}
+
+
+function createSignal(initialValue) {
+return new Signal(initialValue);
+}
+
+function createComputed(computeFn) {
+return new Computed(computeFn);
+}
+
+function createEffect(effectFn) {
+return new Effect(effectFn);
+}
+
+const userslist = ["Rakesh" , "Rajesh" , "Ramesh" , "Rakhi"]
+const loggedIn = createSignal(false)
+const user = createSignal("")
+
+if (userslist.includes(localStorage.getItem("user"))){
+loggedIn.value = true
+user.value = localStorage.getItem("user")
+}
+
+createEffect(() => {
+
+if (!loggedIn.value){
+window.lg.style.display = "none"
+}else {
+window.lg.style.display = "block"
+}
+
+})
+
+/** @type {HTMLButtonElement} */
+
+
+
+
+var zpassword = "tree123#@"
+
+document.body.onload = () => {
+/** @type {HTMLDialogElement} */
+var modal = window.modal
+const loginbtn = window.login
+loginbtn.addEventListener("click", () => {
+if (loggedIn.value) {
+return
+}
+modal.style.display = "grid"
+modal.classList.add("opacity-100")
+modal.showModal()
+})
+
+
+/** @type {import('./types').HTMLEMailInput} */
+var email = window.email
+/** @type {HTMLInputElement} */
+var password = window.pass
+window.cbtn.addEventListener("click", () => {
+modal.classList.remove("opacity-100")
+modal.classList.add("opacity-0")
+modal.style.display = "none"
+modal.close()
+})
+window.dform.addEventListener("submit", () => {
+switch (email.value){
+case (" "):{
+console.log(password.value, password)
+if (password.value == zpassword) {
+console.log("Logged In")
+user.value = "Rajesh"
+login("Rajesh")
+break;
+}
+}
+case ("bhupendrafromus@gmail.com"):{
+if (password.value == zpassword) {
+console.log("Logged In")
+user.value = "Bhupendra"
+login("Bhupendra")
+}
+}
+}
+modal.style.display = "none"
+modal.close()
+})
+window.lg.addEventListener("click", () => {
+localStorage.removeItem("user")
+loggedIn.value= false
+user.value = ""
+})
+
+function login(user){
+loggedIn.value = true
+localStorage.setItem("user",user)
+}
+
+createEffect(() => {
+if (loggedIn.value == true){
+loginbtn.innerHTML = user.value
+}else {
+loginbtn.innerHTML = "Log In"
+}
+})
+
+
+}
+</script>
+
+</body>
+
+   
+</body>
+</html>

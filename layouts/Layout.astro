@@ -1,0 +1,117 @@
+---
+interface Props {
+	title: string;
+}
+import { NavBar } from "../components/nav";
+import 'tippy.js/dist/tippy.css';
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>{title}</title>
+    
+  <script defer type="module">
+     (function()  {
+      document.body.style.setProperty("--num",+localStorage.getItem("credit"))
+      })()
+  </script>
+	</head>
+	<body class="overflow-hidden">
+		<NavBar isprotected/>
+		<div  id="swup" class="transition-fade">
+			<slot />
+		</div>
+	</body>
+</html>
+<style  is:global>
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@500&family=Montserrat&display=swap');
+@font-face {
+	font-family: 'Harlouda';
+	src: url('/harlow.ttf');
+}
+	*{
+		margin: 0;
+		--nav-width:64px;
+		padding: 0;
+	}
+	
+	*::-webkit-scrollbar {
+        width: 12px;               /* width of the entire scrollbar */
+        }
+
+        *::-webkit-scrollbar-track {
+        background: none;        /* color of the tracking area */
+        }
+
+        *::-webkit-scrollbar-thumb {
+        background-color: black;    /* color of the scroll thumb */
+        border-radius: 1rem;  
+		transition: background-color 0.5s ease;
+        }
+		
+        *::-webkit-scrollbar {
+        width: 12px;               /* width of the entire scrollbar */
+        }
+
+        *::-webkit-scrollbar-track {
+        background: none;        /* color of the tracking area */
+        }
+
+        *::-webkit-scrollbar-thumb:hover {
+        background-color: rgb(81, 81, 81);    /* color of the scroll thumb */
+		box-shadow: var(--shadow-2);
+        border-radius: 1rem;  
+        }
+	body
+	{
+
+		background: url('/mbg.png');
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	*[data-heading]
+	{
+
+		font-family: 'Montserrat';
+	}
+/* Slightly move main content */
+
+html.is-changing .transition-main {
+  transition: opacity 100ms ease-in-out, transform 400ms ease;
+}
+
+html.is-animating.is-leaving .transition-main {
+	opacity:0;
+  transform: translateX(calc(1 * 5vh * var(--overlay-direction, 1)));
+}
+
+html.is-animating.is-rendering .transition-main {
+	opacity: 1;
+  transform: translateX(calc(-1 * 5vh * var(--overlay-direction, 1)));
+}
+
+
+.transition-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  background-color: var(--swup-blue-darker);
+  opacity: 0;
+  transform: translate3d(0, calc(-1 * 100% * var(--overlay-direction, 1)), 0);
+  pointer-events: none;
+}
+
+html.is-changing .transition-fade {
+  transition: opacity 0.25s;
+  opacity: 1;
+}
+/* Define the styles for the unloaded pages */
+html.is-animating .transition-fade {
+  opacity: 0;
+}
+</style>

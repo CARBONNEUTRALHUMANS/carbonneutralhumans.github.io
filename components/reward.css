@@ -1,0 +1,16 @@
+.my-transition::backdrop {
+    background: rgba(0,0,0,0.5);
+}
+
+.my-transition, .my-transition::backdrop {
+    opacity: 0;
+    transition: opacity 300ms ease;
+}
+
+.my-transition.modal-showing, .my-transition.modal-showing::backdrop {
+    opacity: 1;
+}
+
+.my-transition.modal-closing, .my-transition.modal-closing::backdrop {
+    opacity: 0;
+}

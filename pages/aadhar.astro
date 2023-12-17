@@ -1,0 +1,11 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { NavBar } from '../components/nav';
+import Aadha from '../components/aadhar.vue'
+---
+
+<Layout title='My Aadhar'>
+    <div class="w-100vw grid place-items-center" style="height: calc(100vh - 64px);">
+        <Aadha client:only="vue"/>
+    </div>
+</Layout>
