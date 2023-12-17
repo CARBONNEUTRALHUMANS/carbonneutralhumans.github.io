@@ -1,7 +1,6 @@
 <script setup lang="ts">
     import { onMounted, ref } from 'vue';
     import Qrcode from 'easyqrcodejs'
-    import {inView,animate} from 'motion'
     const {index} = defineProps<{
         index: number
     }>()
@@ -9,13 +8,6 @@
     const a = ref<HTMLElement>()
 
     onMounted(() => {
-        inView(a.value, () => {
-            animate(a.value, {
-                opacity:1
-            }, {duration:0.4})
-            return (leaveInfo) => a.value.style.opacity = "0";
-
-        })
         new Qrcode(qr.value, {
             text:'http://localhost:4321/mytree?i='+index,
             height:150,
