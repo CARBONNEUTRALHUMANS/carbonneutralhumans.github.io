@@ -2,7 +2,6 @@ import {component$, useSignal, useStyles$,useVisibleTask$,$, useStylesScoped$, u
 import styles from './nav.styl?inline';
 import {LuUserCircle,LuX,LuLogOut} from '@qwikest/icons/lucide'
 import { data, firstNames } from './db';
-import { animate } from 'motion';
 type NavBarProps = {
     isprotected?: boolean
 }
@@ -33,9 +32,6 @@ export const NavBar = component$<NavBarProps>((props) => {
             })
 
         }else {
-            animate(a.value, {
-                opacity:0,
-            },{duration:1000})
             setTimeout(() => {
             a.value.style.display = "none"
 

@@ -1,7 +1,6 @@
 <script setup lang="ts">
     import {ref,onMounted, type Ref, computed}from'vue'
 import { data } from './db';
-    import {animate} from 'motion'
     let dialog = ref(null) as Ref<HTMLDialogElement>;
     let m = ref(null) as Ref<HTMLDivElement>;
     let f = ref()
@@ -17,10 +16,6 @@ import { data } from './db';
     
     onMounted(() => {
         console.log('is claimed: '+isClaimed(2))
-        animate(rew.value, {
-            opacity:1,
-            transform:"translateX(0px)"
-        },{duration:0.7})
         f.value = localStorage.getItem("user")
     })  
     var showModal = async (num,event:Event) => {
