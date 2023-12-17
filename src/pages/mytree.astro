@@ -5,6 +5,5 @@ import Tree from "../components/tree.vue";
 import Layout from "../layouts/Layout.astro";
 ---
 <Layout title="My Tree">
-    <NavBar isprotected/>
-    <Tree client:load/>
+    <Tree client:only="vue"/>
 </Layout>

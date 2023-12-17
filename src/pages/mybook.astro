@@ -1,18 +1,9 @@
 ---
 import { NavBar } from "../components/nav";
-import { PassBook } from "../components/passbook";
+import PassBook from "../components/passbook.vue";
 import Layout from "../layouts/Layout.astro";
 ---
-<Layout title="My EnherBook">
-    <script>
-        window.onload = function() {
-            if(!window.location.hash) {
-                window.location = window.location + '#loaded';
-                window.location.reload();
-            }
-        }
-    </script>
-    <NavBar isprotected/>
-
-    <PassBook/>
+<Layout title="My Tree">
+    
+    <PassBook client:load/>
 </Layout>

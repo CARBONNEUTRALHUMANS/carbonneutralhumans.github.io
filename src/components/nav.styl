@@ -21,3 +21,24 @@
 .dialog
     &::backdrop
         backdrop-filter blur(30px)
+@property --num {
+  syntax: "<integer>";
+  initial-value: 50;
+  inherits: false;
+}
+
+.text {
+  transition: --num 0.1s;
+  counter-set: num var(--num);
+  font: 400 20px system-ui;
+width calc(fit-content +20px)
+text-align: center
+display flex
+align-items center
+}
+.text::after {
+  content: counter(num);
+  position: relative
+  left 10px
+  top 0
+}

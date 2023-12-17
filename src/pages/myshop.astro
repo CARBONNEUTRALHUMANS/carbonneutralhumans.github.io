@@ -1,0 +1,91 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { NavBar } from '../components/nav';
+import {Icon} from 'astro-icon'
+---
+
+<Layout title="Welcome to Astro.">
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Hind:wght@500&family=Montserrat&display=swap');
+@import "https://unpkg.com/open-props";
+
+    </style>
+    <div class="aparent">
+        <div class="p1 panel h-100% bg-#BED6C5" >
+            <div class="col items-end">
+                <a class="no-underline bg-white py-5 mx-7 rounded-4 hover:bg-#010001 hover:text-white transition-all duration-250 transition-ease text-black font-[system-ui]" href="#">
+                    <h1 class="grid items-end">
+
+                        Get Vouchers
+                    </h1>
+                </a>
+            </div>
+            <div class="col place-content-center">
+                <Icon class="w-90% h-90% rotate-90" name="mdi:repeat"/>
+            </div>
+            <div class="col items-start align-start">
+                <a href="/shop" class="no-underline bg-white py-5 mx-7 rounded-4 hover:bg-#010001 hover:text-white transition-all duration-250 transition-ease text-black font-[system-ui]">
+                    <h1 class="align-start">
+                        Buy Trees
+                    </h1>
+                </a>
+            </div>
+           </div>
+           <div class="p2 panel  h-100%">
+            <img class="w-full [aspect-ratio:1/1.1;]  box-border" src="/animtree.gif" alt="">
+
+               </div>
+   
+   
+           </div>
+           
+       </div>
+</Layout>
+<style
+
+
+>
+  @import url('https://fonts.googleapis.com/css2?family=Anton&family=Hind:wght@500&family=Montserrat&display=swap');
+    .aparent{
+        display: grid;
+        grid-template-areas: 
+            'p2  p1'
+            'p2 p1';
+        width: 100vw;
+        height:calc(100vh - var(--nav-width));
+        padding: 0;
+        
+       overflow: hidden;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .p1 {
+        grid-area: p1;
+        display: grid;
+                    
+        background-image: url('/mbg.png');     
+        background-repeat: no-repeat;
+        background-size: cover ;
+        align-items: center;
+        background: red;
+        grid-auto-flow: row;
+    }
+    .p1 > * {
+        flex-grow: 1;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        display: grid;
+        }
+    .p2{
+        grid-area:p2;
+        
+        background-color: #BED7C4;
+
+        }
+    .panel {
+        display: grid;
+        place-items: center;
+    }
+
+</style>

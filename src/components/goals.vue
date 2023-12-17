@@ -1,11 +1,11 @@
 <script setup lang="ts">
     import {ref,onMounted, type Ref, computed}from'vue'
-    import lottie from 'lottie-web'
 import { data } from './db';
-
+    import {animate} from 'motion'
     let dialog = ref(null) as Ref<HTMLDialogElement>;
     let m = ref(null) as Ref<HTMLDivElement>;
-    let f = ref(localStorage.getItem("user"))
+    let f = ref()
+    const rew = ref<HTMLElement>()
     let user = computed(() => {
         return data.filter((el) => {
             return el.firstName == f.value
@@ -16,23 +16,47 @@ import { data } from './db';
     ])
     
     onMounted(() => {
-        
-    })
-    var showModal = () => {
-        lottie.loadAnimation({
+        console.log('is claimed: '+isClaimed(2))
+        animate(rew.value, {
+            opacity:1,
+            transform:"translateX(0px)"
+        },{duration:0.7})
+        f.value = localStorage.getItem("user")
+    })  
+    var showModal = async (num,event:Event) => {
+        let lottie = await import('lottie-web')
+        if (!dialog) return
+        (event.target as HTMLButtonElement).style.background = "red" as string
+        (event.target as HTMLButtonElement).disabled = true
+        localStorage.setItem(`${num}`, "true")
+        localStorage.setItem("credit", `${+localStorage.getItem("credit") + (10 * num)}`)
+        window.dispatchEvent( new Event('storage') ) // <----- 
+
+        lottie.default.loadAnimation({
             container: m.value,
             path:'/anim.json',
             loop:false,
             name:"Check",
         })
-        lottie.setSpeed(0.5)
+        lottie.default.setSpeed(0.5)
         dialog.value.showModal()
     }
+    var isClaimed = (num) => {
+        var storedValue = localStorage.getItem(`${num}`)
+        
+        if (storedValue == undefined){
+            return false
+        }
+        return true
+    }
+    var closeModal = async () => {
+        let lottie = await import('lottie-web')
+        
+        if (!dialog) return
 
-    var closeModal = () => {
         dialog.value.setAttribute("closing","")
         dialog.value.addEventListener("animationend",() => {
-            lottie.destroy("Check")
+            lottie.default.destroy("Check")
             dialog.value.removeAttribute("closing")
             dialog.value.close()
         },{once:true});
@@ -43,23 +67,24 @@ import { data } from './db';
 
 <template>
     <div class="div">
-        <div class="rewards shadow-2xl rounded-4">
+        <div ref="rew" class="rewards shadow-2xl rounded-4 opacity-0 translate-x-1000%">
             <h1 class="text-7xl" style="font-family: 'Harlouda';">Rewards:</h1>
             <div v-for="reward in rewards" class="reward">
-                <h2>
-                    Claim Your Reward: {{ reward }}
-                </h2>
-                <div class="spacer"></div>
-                <button :disabled="user.trees.length < reward" @click="showModal" class="bg-amber cursor-pointer pointer-events-auto  hover:bg-amber-200 transition-all border-none p-3 text-lg rounded-3"> 
-                    Claim Reward
-                </button>
+                <template v-if="user">
+                    <h2>
+                        Claim Your Reward: {{ reward }}
+                    </h2>
+                    <div class="spacer"></div>
+                    <button :disabled="user.trees.length < reward || isClaimed(reward)" @click="(e) => showModal(reward,e)" class="bg-amber cursor-pointer pointer-events-auto  hover:bg-amber-200 transition-all border-none p-3 text-lg rounded-3"> 
+                        Claim Reward
+                    </button>
+                </template>
             </div>
         </div>
     </div>
     <dialog ref="dialog" class=" text-center shadow-5 shadow-black font-sans gap-4 m-auto t w-40vw h-50vh">
         <div ref="m" class="w-50 h-50 m-auto"></div>
         <h1>Reward Successfully Claimed</h1>
-        <h2 class="mb-4">Scratch Code: {{ Math.floor(Math.random() * 10 ** 4) }}-{{ Math.floor(Math.random() * 10 ** 4) }}-{{ Math.floor(Math.random() * 10 ** 4) }} </h2>
         <button @click="closeModal" class="bg-cyan cursor-pointer hover:bg-cyan-500 p-4 text-lg transition-all border-none rounded-4 px-6">Close</button>
     </dialog>
 </template>
@@ -99,6 +124,19 @@ import { data } from './db';
         display:grid;
         text-align: center;
     }
+
+        *::-webkit-scrollbar {
+        width: 12px;               /* width of the entire scrollbar */
+        }
+
+        *::-webkit-scrollbar-track {
+        background: none;        /* color of the tracking area */
+        }
+
+        *::-webkit-scrollbar-thumb {
+        background-color: black;    /* color of the scroll thumb */
+        border-radius: 1rem;  
+        }
     .rewards > * {
         display:flex;
         align-items: center;

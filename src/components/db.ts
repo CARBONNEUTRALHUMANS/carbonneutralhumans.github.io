@@ -4,7 +4,6 @@ export type Tree = {
     biologicalType: string;
     location:string;
     height: number;
-    found: boolean;
 }
 export type User = {
     firstName: string;
@@ -13,7 +12,8 @@ export type User = {
     age: number;
     birthday:Date;
     gender:string;
-    trees : Tree[]
+    trees : Tree[];
+    aadharNumber: number;
 }
 export const data: User[] = [
     {
@@ -23,47 +23,39 @@ export const data: User[] = [
         birthday: new Date("2012-3-2"),
         gender: "MALE",
         email: "rajesh121@gmail.com",
+        aadharNumber:Math.floor(Math.random() * 10 ** 12),
         trees: [
             {
                 biologicalType: "Peepal",
                 dayPlanted: new Date("2018-2-4"),
                 genericType: "Ficus religiosa",
                 location: "St. Paul HS",
-                height: 22,
-                found:true,
+                height: 22
             },
             {
                 biologicalType: "Peepal",
-                dayPlanted: new Date("2017-4-4"),
+                dayPlanted: new Date("2018-2-4"),
                 genericType: "Ficus religiosa",
                 location: "St. Paul HS",
-                height: 22,
-                found:true,
-
+                height: 22
             },            {
                 biologicalType: "Peepal",
-                dayPlanted: new Date("2019-8-4"),
+                dayPlanted: new Date("2018-2-4"),
                 genericType: "Ficus religiosa",
                 location: "St. Paul HS",
-                height: 22,
-                found:true,
-
+                height: 22
             },            {
                 biologicalType: "Peepal",
-                dayPlanted: new Date("2010-2-4"),
+                dayPlanted: new Date("2018-2-4"),
                 genericType: "Ficus religiosa",
                 location: "St. Paul HS",
-                height: 22,
-                found:true,
-
+                height: 22
             },         {
                 biologicalType: "Peepal",
-                dayPlanted: new Date("2016-2-4"),
+                dayPlanted: new Date("2018-2-4"),
                 genericType: "Ficus religiosa",
                 location: "St. Paul HS",
-                height: 22,
-                found:false,
-
+                height: 24
             },
             
         ],
@@ -74,6 +66,8 @@ export const data: User[] = [
         email: "bhupendra2@gmail.com",
         gender: "FEMALE",
         birthday: new Date("2001-3-2"),
+        aadharNumber:Math.floor(Math.random() * 10 ** 12),
+
         age:12,
         trees: [
             {
@@ -81,9 +75,7 @@ export const data: User[] = [
                 dayPlanted: new Date("2018-2-4"),
                 genericType: "Ficus religiosa",
                 location: "St. Paul HS",
-                height:39,
-                found:true,
-
+                height:39
             }
         ],
     }

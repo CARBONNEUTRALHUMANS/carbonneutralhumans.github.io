@@ -19,7 +19,7 @@
 
             <div class="relative">
 
-                <img  src="https://xsgames.co/randomusers/avatar.php?g=male">
+                <img  src="/44.jpg">
                 <div class="absolute right--150% font-bold bottom-0 text-5xl">
 
                     {{ Math.floor(Math.random() * 10 ** 4) }} {{ Math.floor(Math.random() * 10 ** 4) }} {{ Math.floor(Math.random() * 10 ** 4) }}
