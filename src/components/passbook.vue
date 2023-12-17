@@ -1,7 +1,7 @@
 <script setup lang="ts">
     import { type Ref,ref, computed, onMounted } from 'vue';
 import { data, type User } from './db';
-    import { getAge } from '../../dist/_astro/passbook.388ddd7d';
+    import { getAge } from './passbook';
     import T from './t.vue'
     import {ArrowRightCircle,ArrowLeftCircle,ArrowBigLeft} from "lucide-vue-next"
     const currentUser = ref<User>()
