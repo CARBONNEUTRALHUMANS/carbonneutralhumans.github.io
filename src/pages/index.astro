@@ -10,19 +10,19 @@ import { NavBar } from '../components/nav';
 
     </style>
     <div class="aparent">
-        <div class="p1 panel h-100% bg-#BED6C5" >
+        <div class="p1  panel h-100% bg-#BED6C5" >
                    
            </div>
            <div class="p2 panel  h-100%">
-               <h1 class="text-center uppercase text-black! w-50% tracking-wide text-7xl text-balance drop-shadow-lg drop-shadow-black p-6" style="font-family:'Anton';box-shadow:var(--shadow-4);">Welcoming you the AI.
-               #CarbonOmix
+               <h1 class="text-center @sm:w-full! backdrop-blur-3 uppercase mb-4 text-black! w-50% tracking-wide text-7xl text-balance shadow-2xl bg-#FFF3 shadow-black p-6" style="font-family:'Anton';box-shadow:var(--shadow-4);">Welcoming you the Enviro.
+               #Enviro
                </h3>
                <div class="flex flex-col w-100% gap-3 items-center">
                    
-                   <a data-heading href="/mybook" class="bg-white decoration-none p-3 rounded-3 h-30px grid place-items-center text-black hover:bg-black hover:text-white transition-all duration-250 w-80%  text-center font-bold  uppercase mont">My Enherbook</a>
-                   <a data-heading href="/aadhar" class="bg-white decoration-none p-3 rounded-3 h-30px grid place-items-center  text-black hover:bg-black hover:text-white transition-all duration-250 w-80% text-center font-bold  uppercase mont ">My Enher Aadhar</a>
-                   <a data-heading href="/myshop" class="bg-white decoration-none p-3 rounded-3 h-30px grid place-items-center text-black hover:bg-black hover:text-white transition-all duration-250 w-80%  text-center font-bold  uppercase mont">EnherSHop</a>
-                   <a data-heading href="/enhergoals" class="bg-white decoration-none p-3 rounded-3 h-30px grid place-items-center text-black hover:bg-black hover:text-white transition-all duration-250 w-80%  text-center font-bold  uppercase mont">EnherGoals</a>
+                   <a data-heading href="/mybook" class="bg-white decoration-none p-3 rounded-3 h-30px grid place-items-center text-black hover:bg-black hover:text-white transition-all duration-250 w-80%  text-center font-bold  uppercase mont">My Enviro book</a>
+                   <a data-heading href="/aadhar" class="bg-white decoration-none p-3 rounded-3 h-30px grid place-items-center  text-black hover:bg-black hover:text-white transition-all duration-250 w-80% text-center font-bold  uppercase mont ">My Enviro Aadhar</a>
+                   <a data-heading href="/myshop" class="bg-white decoration-none p-3 rounded-3 h-30px grid place-items-center text-black hover:bg-black hover:text-white transition-all duration-250 w-80%  text-center font-bold  uppercase mont">EnviroSHop</a>
+                   <a data-heading href="/enhergoals" class="bg-white decoration-none p-3 rounded-3 h-30px grid place-items-center text-black hover:bg-black hover:text-white transition-all duration-250 w-80%  text-center font-bold  uppercase mont">EnviroGoals</a>
 
                </div>
    
@@ -36,6 +36,20 @@ import { NavBar } from '../components/nav';
 
 >
   @import url('https://fonts.googleapis.com/css2?family=Anton&family=Hind:wght@500&family=Montserrat&display=swap');
+  @media only screen and (min-width: 700px;) {
+  .p1 {
+    display: none !important;
+  }
+  .aparent {
+    grid-template-areas: 'p2 p2'
+                            'p2 p2' !important;
+    place-content: center !important;;
+  }
+
+  .p2 {
+    height: 100% !important;
+  }
+}
     .aparent{
         display: grid;
         grid-template-areas: 
@@ -51,16 +65,17 @@ import { NavBar } from '../components/nav';
     }
     .p1 {
         grid-area: p1;
-        background-image: url('/treebg.jpg');
+        background-image: url('/logo.png');
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: contain;
+        background-color: #F9F9F9;
         background-position: center;
         position: relative;
     }
     .p2{
         grid-area:p2;
         
-        
+        justify-content: center;
         background-image: url('/mbg.png');     
         background-repeat: no-repeat;
         background-size: cover ;

@@ -18,7 +18,7 @@
 </script>
 
 <template>
-    <a ref="a" class="my-5 inline-block opacity-0" :href="`http://localhost:4321/mytree?i=${index}`">
+    <a ref="a" class="my-5 inline-block" :href="`http://localhost:4321/mytree?i=${index}`">
 
         <h1>    
             <div ref="qr" class="qr"></div>

@@ -21,6 +21,11 @@ import { data, type User } from './db';
         return (currentUser.value.age * ((+electricBill.value * 105) + (+gasBill.value * 105) + (+petrolBill.value * 113)))/1000
     })
     onMounted(() => {
+        document.querySelectorAll("*").forEach((v) => {
+            v.addEventListener("click", (e) => {
+                console.log(e.target)
+            })
+        })
         book.value.classList.remove("hidden")
         book.value.animate({
             opacity:1,

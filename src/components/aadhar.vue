@@ -8,7 +8,7 @@
 </script>
 
 <template>
-    <div class="flex flex-col justify-self-center p-4 rounded-5 gap-4 bg-white w-50vw h-60vh m-auto font-sans">
+    <div class="flex flex-col justify-self-center p-4 rounded-5 min-w-fit min-h-fit bg-white w-50vw h-60vh m-auto font-sans">
         <div class="h-30% justify-around flex">
             <img src="/aadhar.png" class="h-100%" alt="">
             <img src="/aadha.png" class="h-100%" alt="">
