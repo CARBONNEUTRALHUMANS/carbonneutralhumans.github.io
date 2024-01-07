@@ -1,0 +1,81 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/card.astro';
+
+interface Card {
+    type:"Ola" | "IRCTC" | "IBus"| "Uber" | "Urban" | "Apple" | "Samsung" | "GPay" | "PayTM" | "Airtel" | "Indigo",
+    heading: string;
+    description: string;
+    price: number
+}
+
+let companyTypes: ("Ola" | "IRCTC" | "IBus"| "Uber" | "Urban" | "Apple" | "Samsung" | "GPay" | "PayTM" | "Airtel" | "Indigo")[] = [
+"Ola" ,"IRCTC" ,"IBus","Uber" ,"Urban" ,"Apple" ,"Samsung" ,"GPay" ,"PayTM" ,"Airtel" , "Indigo"
+]
+
+let list: Card[]  = [];
+
+let task = () => {
+    let m: Card[] = [];
+    companyTypes.forEach(d => {
+        m.push({
+            heading:d,
+            description:"20% off",
+            type: d,
+            price: 0
+        })
+    } )
+    m.forEach((data) => {
+        for (let i = 0; i < 5; i++) {
+            list.push({
+                heading: `${data.type} Gift Card`,
+                description:`${i == 0 ? 10 : i * 20}% off`,
+                type:data.type,
+                price: i * 20
+            })
+        }
+    })
+    console.log(list)
+}
+
+task()
+---
+
+<Layout title='Get Vouchers'>
+    <div class="w-100vw! grid gap-7 place-items-center pt-3 grid-auto-flow-row grid-cols-1 overflow-scroll box-border" style="height: calc(100vh - 64px);">
+      {list.map((card) => <Card heading={card.heading} price={card.price} type={card.type} desc={card.description}/>) }
+
+    </div>
+    <script>
+
+import Toastify from 'toastify-js'
+
+        let credit = +localStorage.getItem("credit")
+        window.addEventListener("storage", () => {
+            credit = +localStorage.getItem("credit")
+        })
+        document.querySelectorAll("[data-price]").forEach(el => {
+            let price = +el.getAttribute("data-price")
+            let headingEl = el.querySelector(".heading")
+            let heading = headingEl.innerHTML
+            el.querySelector("button").addEventListener("click",e => {
+                if (credit >= price){
+                    localStorage.setItem("credit", (credit - price).toString())
+                    window.dispatchEvent( new Event('storage') ) 
+                }
+
+                Toastify({
+                    text: `Bought ${heading} For ${price}`,
+                    duration: 3000,
+                    newWindow: true,
+                    close: true,
+                    gravity: "top", // `top` or `bottom`
+                    style: {
+                        background: "BLACK",
+  },
+}).showToast();
+            })
+        })
+                
+    </script>
+</Layout>

@@ -1,0 +1,61 @@
+---
+import "toastify-js/src/toastify.css"
+
+interface Card {
+    type:"Ola" | "IRCTC" | "IBus"| "Uber" | "Urban" | "Apple" | "Samsung" | "GPay" | "PayTM" | "Airtel" | "Indigo",
+    heading: string;
+    desc: string;
+}
+
+const {heading,desc,type,price} = Astro.props as Card
+
+---
+
+<div  data-price={price == 0 ? 10 : price} class="flex flex-row h-200px w-25vw rounded-4  p-3 font-[system-ui] bg-white">
+    <div class="grid place-items-center px-3">
+        <img class="w-80px" src={
+            type == "Airtel"
+                ? "/airtel.webp"
+
+                : type == "Apple" ?
+                    "/apple.webp"
+                : type == "PayTM" ?
+                "paytm.webp"
+                : type == "GPay" ?
+                "/gpay.webp"
+                : type == "Indigo"
+                ? "/indigo.svg"
+                : type == "Samsung"
+                 ? "/samsung.webp"
+                : type == "IRCTC"
+                    ? "irctc.webp"
+                : type == "Uber"
+                ? "uber.webp"
+                : type == "Urban"
+                ? "urbanclap.webp"
+                : type == "IBus" 
+                ? "ibus.png"
+                 : "/ola.webp"
+        }/>
+    </div>
+    <div class="flex-1 min-w-9 grid justify-center border-l-solid border-l-2 ml-7">
+        <div class="flex flex-col h-full items-center text-center">
+
+            <h1 class="heading text-xl text-center">{heading}</h1>
+            <h1 class="bg-red mt-2 h-2px! rounded-3 w-full"></h1>
+            <p class="description mt-4 text-center text-balance">{desc}</p>
+            <p class="price mt-5 text-2xl">Price: 
+            <span class="text-green">
+                &#169;{price == 0 ? 10 : price}
+            </span>
+            </p>
+            <button class="buy mx-auto justify-self-end bg-yellow-300 hover:bg-yellow-500 transition-all cursor-pointer hover-shadow-xl shadow shadow-lg mt-auto border-none w-full rounded-2 outline-none p-2">Buy</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    import Toastify from 'toastify-js'
+
+   
+</script>

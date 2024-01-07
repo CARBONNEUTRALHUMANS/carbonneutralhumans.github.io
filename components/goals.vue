@@ -1,7 +1,6 @@
 <script setup lang="ts">
     import {ref,onMounted, type Ref, computed}from'vue'
 import { data } from './db';
-    import {animate} from 'motion'
     let dialog = ref(null) as Ref<HTMLDialogElement>;
     let m = ref(null) as Ref<HTMLDivElement>;
     let f = ref()
@@ -17,10 +16,6 @@ import { data } from './db';
     
     onMounted(() => {
         console.log('is claimed: '+isClaimed(2))
-        animate(rew.value, {
-            opacity:1,
-            transform:"translateX(0px)"
-        },{duration:0.7})
         f.value = localStorage.getItem("user")
     })  
     var showModal = async (num,event:Event) => {
@@ -30,6 +25,7 @@ import { data } from './db';
         (event.target as HTMLButtonElement).disabled = true
         localStorage.setItem(`${num}`, "true")
         localStorage.setItem("credit", `${+localStorage.getItem("credit") + (10 * num)}`)
+        window.credit = +localStorage.getItem("credit") + (10 * num)
         window.dispatchEvent( new Event('storage') ) // <----- 
 
         lottie.default.loadAnimation({
@@ -67,7 +63,7 @@ import { data } from './db';
 
 <template>
     <div class="div">
-        <div ref="rew" class="rewards shadow-2xl rounded-4 opacity-0 translate-x-1000%">
+        <div ref="rew" class="rewards shadow-2xl rounded-4">
             <h1 class="text-7xl" style="font-family: 'Harlouda';">Rewards:</h1>
             <div v-for="reward in rewards" class="reward">
                 <template v-if="user">
@@ -118,7 +114,7 @@ import { data } from './db';
         overflow-y: scroll;
         height: 70vh;
         width: 40vw;
-        background-color: white;
+        background-color: white ;
         box-sizing: border-box;
         padding: 40px;
         display:grid;

@@ -2,7 +2,6 @@ import {component$, useSignal, useStyles$,useVisibleTask$,$, useStylesScoped$, u
 import styles from './nav.styl?inline';
 import {LuUserCircle,LuX,LuLogOut} from '@qwikest/icons/lucide'
 import { data, firstNames } from './db';
-import { animate } from 'motion';
 type NavBarProps = {
     isprotected?: boolean
 }
@@ -33,9 +32,6 @@ export const NavBar = component$<NavBarProps>((props) => {
             })
 
         }else {
-            animate(a.value, {
-                opacity:0,
-            },{duration:1000})
             setTimeout(() => {
             a.value.style.display = "none"
 
@@ -94,13 +90,13 @@ export const NavBar = component$<NavBarProps>((props) => {
         dialog.value.close()
     })
 
-    const password = "tree123#@"
+    const password = "2525"
 
     const login = $((ev) => {
         ev.preventDefault()
         console.log("HELOP)")
         switch (emailInputValue.value){
-            case "rajesh121@gmail.com":{
+            case "cnn@gmail.com":{
                 if (passwordInputValue.value == password){
                     loggedIn.value = true
                     user.value = "Rajesh"
@@ -123,7 +119,7 @@ export const NavBar = component$<NavBarProps>((props) => {
         <>
         <nav class="nav box-border justify-around">
             <div class="w-50%">
-                <span data-heading class="uppercase">Carbonomix</span>
+                <span data-heading class="uppercase">Enviro</span>
             </div>
             <div class="w-50% px-4 box-border flex justify-around transition-all" id='login'>
             <h1 ref={span} class="text-sm font-bold relative top-100% align-middle text cursor-pointer transition-all">

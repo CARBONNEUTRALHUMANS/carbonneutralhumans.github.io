@@ -73,7 +73,10 @@ background-size: cover;
 .flipped .front,
 .flipped .back {
     transform: rotateY(-180deg);
-    pointer-events: none;
+    
+}
+.flipped .front{
+    pointer-events: none !important;
 }
 
 /* Controller Buttons */

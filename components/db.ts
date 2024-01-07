@@ -76,6 +76,325 @@ export const data: User[] = [
                 genericType: "Ficus religiosa",
                 location: "St. Paul HS",
                 height:39
+            },
+            {
+                biologicalType: "Peepal",
+                dayPlanted: new Date("2018-2-4"),
+                genericType: "Ficus religiosa",
+                location: "St. Paul HS",
+                height:39
+            },{
+                biologicalType: "Peepal",
+                dayPlanted: new Date("2018-2-4"),
+                genericType: "Ficus religiosa",
+                location: "St. Paul HS",
+                height:39
+            },{
+                biologicalType: "Peepal",
+                dayPlanted: new Date("2018-2-4"),
+                genericType: "Ficus religiosa",
+                location: "St. Paul HS",
+                height:39
+            },{
+                biologicalType: "Peepal",
+                dayPlanted: new Date("2018-2-4"),
+                genericType: "Ficus religiosa",
+                location: "St. Paul HS",
+                height:39
+            },{
+                biologicalType: "Peepal",
+                dayPlanted: new Date("2018-2-4"),
+                genericType: "Ficus religiosa",
+                location: "St. Paul HS",
+                height:39
+            },{
+                biologicalType: "Peepal",
+                dayPlanted: new Date("2018-2-4"),
+                genericType: "Ficus religiosa",
+                location: "St. Paul HS",
+                height:39
+            },{
+                biologicalType: "Peepal",
+                dayPlanted: new Date("2018-2-4"),
+                genericType: "Ficus religiosa",
+                location: "St. Paul HS",
+                height:39
+            },{
+                biologicalType: "Peepal",
+                dayPlanted: new Date("2018-2-4"),
+                genericType: "Ficus religiosa",
+                location: "St. Paul HS",
+                height:39
+            },{
+                biologicalType: "Peepal",
+                dayPlanted: new Date("2018-2-4"),
+                genericType: "Ficus religiosa",
+                location: "St. Paul HS",
+                height:39
+            },{
+                biologicalType: "Peepal",
+                dayPlanted: new Date("2018-2-4"),
+                genericType: "Ficus religiosa",
+                location: "St. Paul HS",
+                height:39
+            },{
+                biologicalType: "Peepal",
+                dayPlanted: new Date("2018-2-4"),
+                genericType: "Ficus religiosa",
+                location: "St. Paul HS",
+                height:39
+            },{
+                biologicalType: "Peepal",
+                dayPlanted: new Date("2018-2-4"),
+                genericType: "Ficus religiosa",
+                location: "St. Paul HS",
+                height:39
+            },{
+                biologicalType: "Peepal",
+                dayPlanted: new Date("2018-2-4"),
+                genericType: "Ficus religiosa",
+                location: "St. Paul HS",
+                height:39
+            },{
+                biologicalType: "Peepal",
+                dayPlanted: new Date("2018-2-4"),
+                genericType: "Ficus religiosa",
+                location: "St. Paul HS",
+                height:39
+            },{
+                biologicalType: "Peepal",
+                dayPlanted: new Date("2018-2-4"),
+                genericType: "Ficus religiosa",
+                location: "St. Paul HS",
+                height:39
+            },{
+                biologicalType: "Peepal",
+                dayPlanted: new Date("2018-2-4"),
+                genericType: "Ficus religiosa",
+                location: "St. Paul HS",
+                height:39
+            },{
+                biologicalType: "Peepal",
+                dayPlanted: new Date("2018-2-4"),
+                genericType: "Ficus religiosa",
+                location: "St. Paul HS",
+                height:39
+            },{
+                biologicalType: "Peepal",
+                dayPlanted: new Date("2018-2-4"),
+                genericType: "Ficus religiosa",
+                location: "St. Paul HS",
+                height:39
+            },{
+                biologicalType: "Peepal",
+                dayPlanted: new Date("2018-2-4"),
+                genericType: "Ficus religiosa",
+                location: "St. Paul HS",
+                height:39
+            },{
+                biologicalType: "Peepal",
+                dayPlanted: new Date("2018-2-4"),
+                genericType: "Ficus religiosa",
+                location: "St. Paul HS",
+                height:39
+            },{
+                biologicalType: "Peepal",
+                dayPlanted: new Date("2018-2-4"),
+                genericType: "Ficus religiosa",
+                location: "St. Paul HS",
+                height:39
+            },{
+                biologicalType: "Peepal",
+                dayPlanted: new Date("2018-2-4"),
+                genericType: "Ficus religiosa",
+                location: "St. Paul HS",
+                height:39
+            },{
+                biologicalType: "Peepal",
+                dayPlanted: new Date("2018-2-4"),
+                genericType: "Ficus religiosa",
+                location: "St. Paul HS",
+                height:39
+            },{
+                biologicalType: "Peepal",
+                dayPlanted: new Date("2018-2-4"),
+                genericType: "Ficus religiosa",
+                location: "St. Paul HS",
+                height:39
+            },{
+                biologicalType: "Peepal",
+                dayPlanted: new Date("2018-2-4"),
+                genericType: "Ficus religiosa",
+                location: "St. Paul HS",
+                height:39
+            },{
+                biologicalType: "Peepal",
+                dayPlanted: new Date("2018-2-4"),
+                genericType: "Ficus religiosa",
+                location: "St. Paul HS",
+                height:39
+            },{
+                biologicalType: "Peepal",
+                dayPlanted: new Date("2018-2-4"),
+                genericType: "Ficus religiosa",
+                location: "St. Paul HS",
+                height:39
+            },{
+                biologicalType: "Peepal",
+                dayPlanted: new Date("2018-2-4"),
+                genericType: "Ficus religiosa",
+                location: "St. Paul HS",
+                height:39
+            },{
+                biologicalType: "Peepal",
+                dayPlanted: new Date("2018-2-4"),
+                genericType: "Ficus religiosa",
+                location: "St. Paul HS",
+                height:39
+            },{
+                biologicalType: "Peepal",
+                dayPlanted: new Date("2018-2-4"),
+                genericType: "Ficus religiosa",
+                location: "St. Paul HS",
+                height:39
+            },{
+                biologicalType: "Peepal",
+                dayPlanted: new Date("2018-2-4"),
+                genericType: "Ficus religiosa",
+                location: "St. Paul HS",
+                height:39
+            },{
+                biologicalType: "Peepal",
+                dayPlanted: new Date("2018-2-4"),
+                genericType: "Ficus religiosa",
+                location: "St. Paul HS",
+                height:39
+            },{
+                biologicalType: "Peepal",
+                dayPlanted: new Date("2018-2-4"),
+                genericType: "Ficus religiosa",
+                location: "St. Paul HS",
+                height:39
+            },{
+                biologicalType: "Peepal",
+                dayPlanted: new Date("2018-2-4"),
+                genericType: "Ficus religiosa",
+                location: "St. Paul HS",
+                height:39
+            },{
+                biologicalType: "Peepal",
+                dayPlanted: new Date("2018-2-4"),
+                genericType: "Ficus religiosa",
+                location: "St. Paul HS",
+                height:39
+            },{
+                biologicalType: "Peepal",
+                dayPlanted: new Date("2002-2-4"),
+                genericType: "Ficus religiosa",
+                location: "St. Paul HS",
+                height:39
+            },{
+                biologicalType: "Peepal",
+                dayPlanted: new Date("2018-2-4"),
+                genericType: "Ficus religiosa",
+                location: "St. Paul HS",
+                height:39
+            },{
+                biologicalType: "Peepal",
+                dayPlanted: new Date("2018-2-4"),
+                genericType: "Ficus religiosa",
+                location: "St. Paul HS",
+                height:39
+            },{
+                biologicalType: "Peepal",
+                dayPlanted: new Date("2018-2-4"),
+                genericType: "Ficus religiosa",
+                location: "St. Paul HS",
+                height:39
+            },{
+                biologicalType: "Peepal",
+                dayPlanted: new Date("2018-2-4"),
+                genericType: "Ficus religiosa",
+                location: "St. Paul HS",
+                height:39
+            },{
+                biologicalType: "Peepal",
+                dayPlanted: new Date("2018-2-4"),
+                genericType: "Ficus religiosa",
+                location: "St. Paul HS",
+                height:39
+            },{
+                biologicalType: "Peepal",
+                dayPlanted: new Date("2018-2-4"),
+                genericType: "Ficus religiosa",
+                location: "St. Paul HS",
+                height:39
+            },{
+                biologicalType: "Peepal",
+                dayPlanted: new Date("2018-2-4"),
+                genericType: "Ficus religiosa",
+                location: "St. Paul HS",
+                height:39
+            },{
+                biologicalType: "Peepal",
+                dayPlanted: new Date("2018-2-4"),
+                genericType: "Ficus religiosa",
+                location: "St. Paul HS",
+                height:39
+            },{
+                biologicalType: "Peepal",
+                dayPlanted: new Date("2018-2-4"),
+                genericType: "Ficus religiosa",
+                location: "St. Paul HS",
+                height:39
+            },{
+                biologicalType: "Peepal",
+                dayPlanted: new Date("2018-2-4"),
+                genericType: "Ficus religiosa",
+                location: "St. Paul HS",
+                height:39
+            },{
+                biologicalType: "Peepal",
+                dayPlanted: new Date("2018-2-4"),
+                genericType: "Ficus religiosa",
+                location: "St. Paul HS",
+                height:39
+            },{
+                biologicalType: "Peepal",
+                dayPlanted: new Date("2018-2-4"),
+                genericType: "Ficus religiosa",
+                location: "St. Paul HS",
+                height:39
+            },{
+                biologicalType: "Peepal",
+                dayPlanted: new Date("2018-2-4"),
+                genericType: "Ficus religiosa",
+                location: "St. Paul HS",
+                height:39
+            },{
+                biologicalType: "Peepal",
+                dayPlanted: new Date("2018-2-4"),
+                genericType: "Ficus religiosa",
+                location: "St. Paul HS",
+                height:39
+            },{
+                biologicalType: "Peepal",
+                dayPlanted: new Date("2018-2-4"),
+                genericType: "Ficus religiosa",
+                location: "St. Paul HS",
+                height:39
+            },{
+                biologicalType: "Peepal",
+                dayPlanted: new Date("2018-2-4"),
+                genericType: "Ficus religiosa",
+                location: "St. Paul HS",
+                height:39
+            },{
+                biologicalType: "Peepal",
+                dayPlanted: new Date("2018-2-4"),
+                genericType: "Ficus religiosa",
+                location: "St. Paul HS",
+                height:39
             }
         ],
     }
