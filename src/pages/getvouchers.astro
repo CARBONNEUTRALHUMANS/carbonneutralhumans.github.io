@@ -48,7 +48,6 @@ task()
     </div>
     <script>
 
-import Toastify from 'toastify-js'
 
         let credit = +localStorage.getItem("credit")
         window.addEventListener("storage", () => {
@@ -65,7 +64,7 @@ import Toastify from 'toastify-js'
                 }
 
                 Toastify({
-                    text: `Bought ${heading} For ${price}`,
+                    text: `Bought ${heading} For ${price} Credits`,
                     duration: 3000,
                     newWindow: true,
                     close: true,
