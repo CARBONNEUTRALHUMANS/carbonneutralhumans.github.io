@@ -14,7 +14,7 @@ import { data, type User } from './db';
     const totalOxygen = ref<number>(0)
     const electricBill = ref<string>("1725")
     const gasBill = ref<string>("200")
-    const petrolBill = ref<string>("125")
+    const petrolBill = ref<string>("120")
     const credit = ref<number>(0)
     const sum = computed<number>(() => {
         if (!currentUser.value) return 0
