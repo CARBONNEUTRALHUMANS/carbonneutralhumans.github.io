@@ -34,25 +34,25 @@ export const data: User[] = [
             },
             {
                 biologicalType: "Peepal",
-                dayPlanted: new Date("2018-2-4"),
+                dayPlanted: new Date("2016-2-4"),
                 genericType: "Ficus religiosa",
                 location: "St. Paul HS",
                 height: 22
             },            {
                 biologicalType: "Peepal",
-                dayPlanted: new Date("2018-2-4"),
+                dayPlanted: new Date("2019-2-4"),
                 genericType: "Ficus religiosa",
                 location: "St. Paul HS",
                 height: 22
             },            {
                 biologicalType: "Peepal",
-                dayPlanted: new Date("2018-2-4"),
+                dayPlanted: new Date("2015-2-4"),
                 genericType: "Ficus religiosa",
                 location: "St. Paul HS",
                 height: 22
             },         {
                 biologicalType: "Peepal",
-                dayPlanted: new Date("2018-2-4"),
+                dayPlanted: new Date("2020-2-4"),
                 genericType: "Ficus religiosa",
                 location: "St. Paul HS",
                 height: 24
