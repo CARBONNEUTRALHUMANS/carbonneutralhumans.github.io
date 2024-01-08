@@ -12,9 +12,9 @@ import { data, type User } from './db';
     const previousButton = ref<HTMLButtonElement>()
     const nextButton = ref<HTMLButtonElement>()
     const totalOxygen = ref<number>(0)
-    const electricBill = ref<string>("0")
-    const gasBill = ref<string>("0")
-    const petrolBill = ref<string>("0")
+    const electricBill = ref<string>("1725")
+    const gasBill = ref<string>("200")
+    const petrolBill = ref<string>("125")
     const credit = ref<number>(0)
     const sum = computed<number>(() => {
         if (!currentUser.value) return 0
@@ -228,18 +228,18 @@ import { data, type User } from './db';
 
                         <label class="block">
                             Your Monthly Electric Bill Charges
-                            <input type="number" v-model="electricBill"/> 
+                            <input  type="number" v-model="electricBill"/> 
                         </label>
                         <label class="block">
                             Your Monthly Gas Bill Charges
-                            <input type="number" v-model="gasBill"/> 
+                            <input  type="number" v-model="gasBill"/> 
                         </label>
                         <hr />
                         <label class="block bg-orange-200 p-2 box-border  font-bold">
                             Your Monthly Petroleum Bill Charges
                             <input type="number" v-model="petrolBill"/> 
                         </label>
-                        <h1>Result: {{(totalOxygen + credit) - sum}}</h1>
+                        <h1>Result: {{(Math.floor(((totalOxygen + credit) - sum ) * 100 ) ) / 100 }}</h1>
                         <br />
                         <a href="/" class="bg-#607222 p-4 no-underline text-white mt-3"><LuStepForward class="w-5  h-5"/>Continue</a>
                      </div>
