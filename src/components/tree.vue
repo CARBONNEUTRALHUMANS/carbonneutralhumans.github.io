@@ -38,7 +38,7 @@ import { data, type Tree, type User } from '../components/db';
               </div> 
             </template>
             <template v-else>
-              <h1>Tree Not Found</h1>
+              <h1 class="absolute top-1/2 left-1/2 translate--1/2 text-6xl text-white text-center">Tree Not Found</h1>
             </template>
             </div>
           </template>
