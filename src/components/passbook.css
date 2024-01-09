@@ -16,9 +16,10 @@ background-size: cover;
 /* Book */
 .book {
     position: relative;
-    width: 350px;
-    height: 500px;
+    height: calc(100vh - 90px);
+    aspect-ratio: 350 / 500;
     transition: transform 0.5s;
+    bottom: 30px;
 }
 
 .paper {
@@ -103,17 +104,17 @@ i {
 
 /* Paper stack order */
 #p1 {
-    z-index:7;
+    z-index:4;
 }
 
 #p2 {
-    z-index: 6;
+    z-index: 3;
 }
 
 #p3 {
-    z-index: 5;
+    z-index: 2;
 }
 
 #p4 {
-    z-index: 4;
+    z-index: 1;
 }

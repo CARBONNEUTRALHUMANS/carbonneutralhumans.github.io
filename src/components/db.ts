@@ -19,15 +19,15 @@ export const data: User[] = [
     {
         firstName: "Rajesh",
         lastName: "Kumawat",
-        age:10,
-        birthday: new Date("2012-3-2"),
+        age:18,
+        birthday: new Date("2001-3-2"),
         gender: "MALE",
         email: "rajesh121@gmail.com",
         aadharNumber:Math.floor(Math.random() * 10 ** 12),
         trees: [
             {
                 biologicalType: "Peepal",
-                dayPlanted: new Date("2018-2-4"),
+                dayPlanted: new Date("2002-2-4"),
                 genericType: "Ficus religiosa",
                 location: "St. Paul HS",
                 height: 22
