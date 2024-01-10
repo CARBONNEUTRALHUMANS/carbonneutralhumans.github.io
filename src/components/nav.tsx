@@ -47,10 +47,10 @@ export const NavBar = component$<NavBarProps>((props) => {
             oldHref = document.location.href;
             pathname.value = window.location.pathname
             if (window.location.pathname != "/"){
+
                 if (!document.startViewTransition){
                     return
                 }
-
                 document.startViewTransition(() => {
 
                     a.value.style.opacity = "1"
@@ -96,8 +96,9 @@ export const NavBar = component$<NavBarProps>((props) => {
         ev.preventDefault()
         console.log("HELOP)")
         switch (emailInputValue.value){
-            case "cnn@gmail.com":{
-                if (passwordInputValue.value == password){
+            // biome-ignore lint/suspicious/noFallthroughSwitchClause: <explanation>
+case  "cnn@gmail.com":{
+                if (passwordInputValue.value === password){
                     loggedIn.value = true
                     user.value = "Rajesh"
                     closeDialog()
@@ -106,7 +107,7 @@ export const NavBar = component$<NavBarProps>((props) => {
                 }
             }
             case "bhupendra2@gmail.com":{
-                if (passwordInputValue.value == password){
+                if (passwordInputValue.value === password){
                     loggedIn.value = true
                     user.value = "Bhupendra"
                     closeDialog()
@@ -125,15 +126,25 @@ export const NavBar = component$<NavBarProps>((props) => {
             <h1 ref={span} class="text-sm font-bold relative top-100% align-middle text cursor-pointer transition-all">
                         credit: 
                     </h1>
-                <a style={{"view-transition-name":"link"}} ref={a} href="/" class={"text-lg gap-1 hidden cursor-pointer [text-decoration:none;] text-black self-center hover:text-white transition-all h-full text-black"}>Back</a>
-                <button style={{viewTransitionName:"act"}} onClick$={openDialog} class={"text-lg transition-all gap-2 flex cursor-pointer"}>
+                <button type="button" style={{"view-transition-name":"link"}} ref={a} onClick$={() => {
+                    const el = document.createElement("a")
+                    if (location.pathname === "/mytree"){
+                        el.href = "/mybook"
+                        el.click();
+                        return
+                    }
+
+                    el.href = "/"
+                    el.click();
+                }} class={"text-lg gap-1 hidden cursor-pointer [text-decoration:none;] text-black self-center hover:text-white transition-all h-full text-black"}>Back</button>
+                <button type='button' style={{viewTransitionName:"act"}} onClick$={openDialog} class={"text-lg transition-all gap-2 flex cursor-pointer"}>
                     <LuUserCircle class="translate-y-4px" />
-                    {loggedIn.value ? user.value : `Log In`}
+                    {loggedIn.value ? user.value : "Log In"}
                 </button>
                 {
                     loggedIn.value ?
                     <>
-                    <button class="text-lg gap-2 flex cursor-pointer transition-all" onClick$={() => {
+                    <button type='button' class="text-lg gap-2 flex cursor-pointer transition-all" onClick$={() => {
                         localStorage.removeItem("user")
                         loggedIn.value = false
                         user.value = ""
@@ -152,7 +163,7 @@ export const NavBar = component$<NavBarProps>((props) => {
             {
                !props.isprotected ?
                 
-                <button onClick$={closeDialog} class="font-sans w-6 h-6 absolute right-40px top-10px border-none bg-transparent cursor-pointer text-6xl" style="background-image: url('meow.png');background-size: contain;" id="cbtn">
+                <button type='button' onClick$={closeDialog} class="font-sans w-6 h-6 absolute right-40px top-10px border-none bg-transparent cursor-pointer text-6xl" style="background-image: url('meow.png');background-size: contain;" id="cbtn">
             <LuX />
         </button> : <></>
         }

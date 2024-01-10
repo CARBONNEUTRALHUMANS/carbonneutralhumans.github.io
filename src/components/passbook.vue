@@ -42,6 +42,7 @@
             credit.value = +localStorage.getItem("credit")
             console.log(credit.value)
             currentUser.value.trees.forEach((tree) => {
+                if(tree.notFound) return
                 totalOxygen.value += ((getAge(tree.dayPlanted) * 100) + (getAge(tree.dayPlanted) * 5))
         })
             papers.value = Array.from(document.querySelector(".book").querySelectorAll(".paper") as NodeListOf<HTMLDivElement>) as HTMLDivElement[]
@@ -201,7 +202,7 @@
                             <div v-for="tree,index in currentUser.trees">
                                 <h1>
                                     <ArrowBigLeft/>
-                    {{(getAge(tree.dayPlanted) * 100) + (getAge(tree.dayPlanted) * 5)}}
+                                    {{(!tree.notFound ? (getAge(tree.dayPlanted) * 100) + (getAge(tree.dayPlanted) * 5) : 0) }}
 
                                 </h1>
                             </div>

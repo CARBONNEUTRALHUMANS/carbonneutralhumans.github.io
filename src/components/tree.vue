@@ -21,7 +21,7 @@ import { data, type Tree, type User } from '../components/db';
 
 <template>
         <div v-if="currentUser" class="w-100vw grid place-items-center grid-cols-2 font-sans overflow-hidden" style="height: calc(100vh - 64px);">
-            <template v-if="tree.height != 24">
+            <template v-if="!tree.notFound">
               <div class="w-50vw h-full grid pulse  items-center bg-white">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6374.823124732459!2d75.8939488189096!3d22.71359714188747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1700908975707!5m2!1sen!2sin" style="border:0;" class="w-full h-full" loading="lazy"></iframe>
               </div>

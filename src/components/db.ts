@@ -4,6 +4,7 @@ export type Tree = {
     biologicalType: string;
     location:string;
     height: number;
+    notFound?: boolean
 }
 export type User = {
     firstName: string;
@@ -55,7 +56,8 @@ export const data: User[] = [
                 dayPlanted: new Date("2020-2-4"),
                 genericType: "Ficus religiosa",
                 location: "St. Paul HS",
-                height: 24
+                height: 24,
+                notFound: true
             },
             
         ],
