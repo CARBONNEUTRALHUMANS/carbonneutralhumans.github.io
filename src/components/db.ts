@@ -31,26 +31,28 @@ export const data: User[] = [
                 dayPlanted: new Date("2002-2-4"),
                 genericType: "Ficus religiosa",
                 location: "St. Paul HS",
-                height: 22
+                // 35.37
+                height: Math.floor(Math.random() * 5000) / 100
             },
             {
-                biologicalType: "Peepal",
+                biologicalType: "Maple",
                 dayPlanted: new Date("2016-2-4"),
-                genericType: "Ficus religiosa",
+                genericType: "Acer",
                 location: "St. Paul HS",
-                height: 22
+                height: Math.floor(Math.random() * 5000) / 100
+
             },            {
-                biologicalType: "Peepal",
+                biologicalType: "Willow",
                 dayPlanted: new Date("2019-2-4"),
-                genericType: "Ficus religiosa",
+                genericType: "Salix",
                 location: "St. Paul HS",
-                height: 22
+                height: Math.floor(Math.random() * 5000) / 100
             },            {
-                biologicalType: "Peepal",
+                biologicalType: "Oak",
                 dayPlanted: new Date("2015-2-4"),
-                genericType: "Ficus religiosa",
+                genericType: "Quercus",
                 location: "St. Paul HS",
-                height: 22
+                height: Math.floor(Math.random() * 5000) / 100
             },         {
                 biologicalType: "Peepal",
                 dayPlanted: new Date("2020-2-4"),

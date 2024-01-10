@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { onMounted, ref, type Ref } from 'vue';
 import { data, type Tree, type User } from '../components/db';
+import { getAge } from './passbook';
+
     const r = ref<HTMLElement>()
     const currentUser = ref<User>()
     const tree = ref<Tree>() as Ref<Tree>
@@ -26,13 +28,14 @@ import { data, type Tree, type User } from '../components/db';
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6374.823124732459!2d75.8939488189096!3d22.71359714188747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1700908975707!5m2!1sen!2sin" style="border:0;" class="w-full h-full" loading="lazy"></iframe>
               </div>
               <div class="">
-                <div class="bg-white p-6 rounded-4 shadow-2xl shadow-black">
+                <div class="bg-white mx-4 p-6 rounded-4 shadow-2xl shadow-black">
                   
                   <h1>Type: {{tree.biologicalType}}</h1>
                   <h1>Generic Type: {{tree.genericType}}</h1>
                   <h1>Day Planted: {{tree.dayPlanted.toLocaleDateString()}}</h1>
               <h1>Height: {{tree.height}} Inches</h1>
                 <h1>Owner Name: {{currentUser.firstName}} {{currentUser.lastName}}</h1>
+                <h1>Carbon Absorption: {{ ((getAge(tree.dayPlanted) * 100) + (getAge(tree.dayPlanted) * 5)) }}</h1>
                 </div>
                 
               </div> 
