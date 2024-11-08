@@ -139,7 +139,7 @@ case  "cnn@gmail.com":{
                 }} class={"text-lg gap-1 hidden cursor-pointer [text-decoration:none;] text-black self-center hover:text-white transition-all h-full text-black"}>Back</button>
                 <button type='button' style={{viewTransitionName:"act"}} onClick$={openDialog} class={"text-lg transition-all gap-2 flex cursor-pointer"}>
                     <LuUserCircle class="translate-y-4px" />
-                    {loggedIn.value ? user.value : "Log In"}
+                    User
                 </button>
                 {
                     loggedIn.value ?
