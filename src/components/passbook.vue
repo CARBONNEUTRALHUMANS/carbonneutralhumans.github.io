@@ -4,7 +4,7 @@
         import { getAge } from './passbook';
         import T from './t.vue'
         import {ArrowRightCircle,ArrowLeftCircle,ArrowBigLeft} from "lucide-vue-next"
-        const currentUser = ref<User>()
+        const currentUser =data[0]
         const currentPage = ref(1);
         let maxLocation = ref(5);
         const papers = ref<HTMLDivElement[]>(null)
@@ -31,14 +31,13 @@
                 goNextPage()
             }
         })
+        currentUser.value = data[0]
             book.value.classList.remove("hidden")
             book.value.animate({
                 opacity:1,
             },{duration:200})
             book.value.style.opacity = "1";
-            currentUser.value = data.filter((el) => {
-                return el.firstName == localStorage.getItem("user")
-            })[0]
+            currentUser.value = data[0]
             credit.value = +localStorage.getItem("credit")
             console.log(credit.value)
             currentUser.value.trees.forEach((tree) => {

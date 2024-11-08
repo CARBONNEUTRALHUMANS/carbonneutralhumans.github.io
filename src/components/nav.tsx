@@ -3,7 +3,7 @@ import styles from './nav.styl?inline';
 import {LuUserCircle,LuX,LuLogOut} from '@qwikest/icons/lucide'
 import { data, firstNames } from './db';
 type NavBarProps = {
-    isprotected?: boolean
+    isprotected?: boolean;
 }
 
 export const NavBar = component$<NavBarProps>((props) => {
@@ -76,8 +76,8 @@ export const NavBar = component$<NavBarProps>((props) => {
             user.value = localStorage.getItem("user")
         }
         if (props.isprotected && !loggedIn.value){
-            dialog.value.style.display = "grid"
-            dialog.value.showModal()
+            loggedIn.value = true
+            user.value = "Rajesh"
         }
     })
     const openDialog = $(() => {

@@ -1,9 +1,7 @@
 <script setup lang="ts">
     import { ref } from 'vue';
     import { data } from './db';
-    const currentUser = ref(data.filter((el) => {
-        return el.firstName == localStorage.getItem("user")
-    })[0])
+    const currentUser = data[0]
 
 </script>
 

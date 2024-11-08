@@ -6,9 +6,7 @@ import { data } from './db';
     let f = ref()
     const rew = ref<HTMLElement>()
     let user = computed(() => {
-        return data.filter((el) => {
-            return el.firstName == f.value
-        })[0]
+        return data[0]
     })
     const rewards =ref([
         2,5,10,20,30,40,50,60,70,80,90,100
