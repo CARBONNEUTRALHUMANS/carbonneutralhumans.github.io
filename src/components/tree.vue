@@ -3,7 +3,7 @@
 </script>
 
 <template>
-        <div v-if="currentUser" class="w-100vw grid place-items-center grid-cols-2 font-sans overflow-hidden" style="height: calc(100vh - 64px);">
+        <div class="w-100vw grid place-items-center grid-cols-2 font-sans overflow-hidden" style="height: calc(100vh - 64px);">
               <h1 class="absolute top-1/2 left-1/2 translate--1/2 text-6xl text-white text-center">Tree Not Found</h1>
             </div>
           </template>
