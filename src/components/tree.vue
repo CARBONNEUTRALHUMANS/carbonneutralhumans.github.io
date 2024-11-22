@@ -1,24 +1,5 @@
 <script setup lang="ts">
-import { onMounted, ref, type Ref } from 'vue';
-import { data, type Tree, type User } from '../components/db';
-import { getAge } from './passbook';
 
-    const r = ref<HTMLElement>()
-    const currentUser = ref<User>()
-    const tree = ref<Tree>() as Ref<Tree>
-    onMounted(() => {
-        let username = localStorage.getItem("user");
-
-        currentUser.value = data.filter((el) => {
-
-            return el.firstName == username
-        })[0]
-        const url = new Proxy(new URLSearchParams(window.location.search), {
-          get: (searchParams, prop:string) => searchParams.get(prop),
-        }) as any;
-        tree.value = currentUser.value.trees[url.i]
-        console.log(tree.value,currentUser.value)
-    })
 </script>
 
 <template>
